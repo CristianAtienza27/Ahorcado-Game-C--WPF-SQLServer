@@ -1,0 +1,32 @@
+﻿<Window x:Class="AhorcadoWPF.PantallaTematica"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AhorcadoWPF" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="PantallaTematica" Height="450" Width="400"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None" ResizeMode="NoResize">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="269*"/>
+                <RowDefinition Height="175*"/>
+            </Grid.RowDefinitions>
+            <GroupBox Header="TEMÁTICA" FontSize="25" Grid.RowSpan="2">
+                <StackPanel>
+                    <Button x:Name="btnAtras" Width="60" Height="50" Margin="327 -70 0 0" Click="btnAtras_Click" Background="{x:Null}" BorderBrush="{x:Null}">
+                        <materialDesign:PackIcon Kind="ArrowBackCircle" Width="25" Height="35"/>
+                    </Button>
+                    <Button Content="PROGRAMACIÓN" x:Name="btnProgramacion" Width="230" Height="40" Margin="0 40 0 10" Click="btnProgramacion_Click"/>
+                    <Button Content="BASE DE DATOS" x:Name="btnBD" Width="230" Height="40" Margin="0 0 0 10" Click="btnBD_Click"/>
+                    <Button Content="LENGUAJE DE MARCAS" x:Name="btnLM" Width="230" Height="40" Margin="0 0 0 10" Click="btnLM_Click"/>
+                    <Button Content="SISTEMAS INFORMÁTICOS" x:Name="btnSI" Width="230" Height="40" Margin="0 0 0 10" Click="btnSI_Click"/>
+                    <Button Content="ENTORNO DE DESARROLLO" x:Name="btnEntorno" Width="230" Height="40" Margin="0 0 0 10" Click="btnEntorno_Click"/>
+                    <Button Content="SQL" x:Name="btnSQL" Width="230" Height="40" Margin="0 0 0 10" Click="btnSQL_Click"/>
+                </StackPanel>
+            </GroupBox>
+        </Grid>
+    </Grid>
+</Window>

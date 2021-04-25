@@ -1,0 +1,186 @@
+﻿<Window x:Class="AhorcadoWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:AhorcadoWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="930" Width="1450"
+        WindowStartupLocation="CenterScreen" Closing="Window_Closing" Loaded="MainWindow_Loaded" ResizeMode="NoResize">
+    <Grid>
+        <Grid>
+            <Grid x:Name="gridPantallaCompleta" Background="LightGray">
+                <Grid VerticalAlignment="Top" Width="1450" Height="55" Background="Black">
+                </Grid>
+                <Grid Margin="66,108,375,225">
+                    <GroupBox FontSize="22" Background="White">
+                        <GroupBox.Header>
+                            <TextBlock x:Name="txtFallos" Text="FALLOS: 0/7" HorizontalAlignment="Center" Foreground="White"/>
+                        </GroupBox.Header>
+                        <Grid Height="350" Width="350" Margin="0 -150 0 0" Background="#FF5F75FD">
+                            <Rectangle Stroke="Black"/>
+                            <Rectangle HorizontalAlignment="Left" Fill="White" Height="15" Margin="36,289,0,0" VerticalAlignment="Top" Width="278"/>
+                            <Rectangle HorizontalAlignment="Left" Fill="White" Height="15" Margin="144,157,-72,0" VerticalAlignment="Top" Width="278" RenderTransformOrigin="0.5,0.5">
+                                <Rectangle.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="90"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                            <Rectangle HorizontalAlignment="Left" Fill="White" Height="15" Margin="102,25,0,0" VerticalAlignment="Top" Width="188"/>
+                            <Rectangle HorizontalAlignment="Left" Fill="White" Height="10" Margin="203,57,0,0" VerticalAlignment="Top" Width="90" RenderTransformOrigin="0.5,0.5">
+                                <Rectangle.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="41.186"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                            <Grid x:Name="muñecoAhorcado">
+                                <Rectangle Name="rc1" HorizontalAlignment="Left" Fill="White" Height="5" Margin="101,54,0,0" VerticalAlignment="Top" Width="44" RenderTransformOrigin="0.5,0.5" Visibility="Collapsed">
+                                    <Rectangle.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform/>
+                                            <RotateTransform Angle="90"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </Rectangle.RenderTransform>
+                                </Rectangle>
+                                <Rectangle x:Name="rc2" HorizontalAlignment="Left" Fill="White" Height="39" Margin="101,78,0,0" VerticalAlignment="Top" Width="44" RadiusX="50" RadiusY="50" Visibility="Collapsed"/>
+                                <Rectangle x:Name="rc3" HorizontalAlignment="Left" Fill="White" Height="11" Margin="84,152,0,0" VerticalAlignment="Top" Width="79" RenderTransformOrigin="0.5,0.5" Visibility="Collapsed">
+                                    <Rectangle.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform/>
+                                            <RotateTransform Angle="90"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </Rectangle.RenderTransform>
+                                </Rectangle>
+                                <Rectangle x:Name="rc4" HorizontalAlignment="Left" Fill="White" Height="5" Margin="84,142,0,0" VerticalAlignment="Top" Width="44" RenderTransformOrigin="0.5,0.5" Visibility="Collapsed">
+                                    <Rectangle.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform/>
+                                            <RotateTransform Angle="131.468"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </Rectangle.RenderTransform>
+                                </Rectangle>
+                                <Rectangle x:Name="rc5" HorizontalAlignment="Left" Fill="White" Height="5" Margin="119,142,0,0" VerticalAlignment="Top" Width="44" RenderTransformOrigin="0.5,0.5" Visibility="Collapsed">
+                                    <Rectangle.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform/>
+                                            <RotateTransform Angle="48.593"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </Rectangle.RenderTransform>
+                                </Rectangle>
+                                <Rectangle x:Name="rc6" HorizontalAlignment="Left" Fill="White" Height="5" Margin="84,207,0,0" VerticalAlignment="Top" Width="44" RenderTransformOrigin="0.5,0.5" Visibility="Collapsed">
+                                    <Rectangle.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform/>
+                                            <RotateTransform Angle="131.468"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </Rectangle.RenderTransform>
+                                </Rectangle>
+                                <Rectangle x:Name="rc7" HorizontalAlignment="Left" Fill="White" Height="5" Margin="118,208,0,0" VerticalAlignment="Top" Width="43" RenderTransformOrigin="0.5,0.5" Visibility="Collapsed">
+                                    <Rectangle.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform/>
+                                            <RotateTransform Angle="52.449"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </Rectangle.RenderTransform>
+                                </Rectangle>
+                            </Grid>
+                            <StackPanel x:Name="PanelRespuesta" Margin="-178,379,-236,-129" Orientation="Horizontal" Height="100"/>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+                <Grid Name="gridBotones" VerticalAlignment="Center" Margin="0,110,64,103" HorizontalAlignment="Right" Width="250" Height="688">
+                    <GroupBox FontSize="22" Background="White" Margin="0,-2,0,2">
+                        <GroupBox.Header>
+                            <TextBlock Text="LETRAS" HorizontalAlignment="Center" Foreground="White"/>
+                        </GroupBox.Header>
+                        <StackPanel x:Name="panelLetras">
+                            <Button x:Name="btnA" Content="A" FontSize="30" Foreground="Black" Background="{x:Null}" HorizontalAlignment="Left" Height="60" Width="60" Click="Pulsar_A"/>
+                            <Button x:Name="btnB" Content="B" FontSize="30" Foreground="Black" Background="{x:Null}" HorizontalAlignment="Center" Margin="0 -60 0 0" Height="60" Width="60" Click="Pulsar_B"/>
+                            <Button x:Name="btnC" Content="C" FontSize="30" Foreground="Black" Background="{x:Null}" HorizontalAlignment="Right" Margin="0 -60 0 0" Height="60" Width="60" Click="Pulsar_C"/>
+                            <Button x:Name="btnD" Content="D" FontSize="30" Foreground="Black" Background="{x:Null}" HorizontalAlignment="Left" Height="60" Width="60" Margin="0 10 0 0" Click="Pulsar_D"/>
+                            <Button x:Name="btnE" Content="E" FontSize="30" Foreground="Black" Background="{x:Null}" HorizontalAlignment="Center" Height="60" Width="60" Margin="0 -60 0 0" Click="Pulsar_E"/>
+                            <Button x:Name="btnF" Content="F" FontSize="30" Foreground="Black" Background="{x:Null}" HorizontalAlignment="Right" Height="60" Width="60" Margin="0 -60 0 0" Click="Pulsar_F"/>
+                            <Button x:Name="btnG" Content="G" FontSize="30" Foreground="Black" Background="{x:Null}" HorizontalAlignment="Left" Height="60" Width="60" Margin="0 10 0 0" Click="Pulsar_G"/>
+                            <Button x:Name="btnH" Content="H" FontSize="30" Foreground="Black" Background="{x:Null}" HorizontalAlignment="Center" Height="60" Width="60" Margin="0 -60 0 0" Click="Pulsar_H"/>
+                            <Button x:Name="btnI" Content="I" FontSize="30" Foreground="Black" Background="{x:Null}" HorizontalAlignment="Right" Height="60" Width="60" Margin="0 -60 0 0" Click="Pulsar_I"/>
+                            <Button x:Name="btnJ" Content="J" FontSize="30" Foreground="Black" Background="{x:Null}" HorizontalAlignment="Left" Height="60" Width="60" Margin="0 10 0 0" Click="Pulsar_J"/>
+                            <Button x:Name="btnK" Content="K" FontSize="30" Foreground="Black" Background="{x:Null}" HorizontalAlignment="Center" Height="60" Width="60" Margin="0 -60 0 0" Click="Pulsar_K"/>
+                            <Button x:Name="btnL" Content="L" FontSize="30" Foreground="Black" Background="{x:Null}" HorizontalAlignment="Right" Height="60" Width="60" Margin="0 -60 0 0" Click="Pulsar_L"/>
+                            <Button x:Name="btnM" Content="M" FontSize="30" Foreground="Black" Background="{x:Null}" HorizontalAlignment="Left" Height="60" Width="60" Margin="0 10 0 0" Click="Pulsar_M"/>
+                            <Button x:Name="btnN" Content="N" FontSize="30" Foreground="Black" Background="{x:Null}" HorizontalAlignment="Center" Height="60" Width="60" Margin="0 -60 0 0" Click="Pulsar_N"/>
+                            <Button x:Name="btnÑ" Content="Ñ" FontSize="30" Foreground="Black" Background="{x:Null}" HorizontalAlignment="Right" Height="60" Width="60" Margin="0 -60 0 0" Click="Pulsar_Ñ"/>
+                            <Button x:Name="btnO" Content="O" FontSize="30" Foreground="Black" Background="{x:Null}" HorizontalAlignment="Left" Height="60" Width="60" Margin="0 10 0 0" Click="Pulsar_O"/>
+                            <Button x:Name="btnP" Content="P" FontSize="30" Foreground="Black" Background="{x:Null}" HorizontalAlignment="Center" Height="60" Width="60" Margin="0 -60 0 0" Click="Pulsar_P"/>
+                            <Button x:Name="btnQ" Content="Q" FontSize="30" Foreground="Black" Background="{x:Null}" HorizontalAlignment="Right" Height="60" Width="60" Margin="0 -60 0 0" Click="Pulsar_Q"/>
+                            <Button x:Name="btnR" Content="R" FontSize="30" Foreground="Black" Background="{x:Null}" HorizontalAlignment="Left" Height="60" Width="60" Margin="0 10 0 0" Click="Pulsar_R"/>
+                            <Button x:Name="btnS" Content="S" FontSize="30" Foreground="Black" Background="{x:Null}" HorizontalAlignment="Center" Height="60" Width="60" Margin="0 -60 0 0" Click="Pulsar_S"/>
+                            <Button x:Name="btnT" Content="T" FontSize="30" Foreground="Black" Background="{x:Null}" HorizontalAlignment="Right" Height="60" Width="60" Margin="0 -60 0 0" Click="Pulsar_T"/>
+                            <Button x:Name="btnU" Content="U" FontSize="30" Foreground="Black" Background="{x:Null}" HorizontalAlignment="Left" Height="60" Width="60" Margin="0 10 0 0" Click="Pulsar_U"/>
+                            <Button x:Name="btnV" Content="V" FontSize="30" Foreground="Black" Background="{x:Null}" HorizontalAlignment="Center" Height="60" Width="60" Margin="0 -60 0 0" Click="Pulsar_V"/>
+                            <Button x:Name="btnW" Content="W" FontSize="30" Foreground="Black" Background="{x:Null}" HorizontalAlignment="Right" Height="60" Width="60" Margin="0 -60 0 0" Click="Pulsar_W"/>
+                            <Button x:Name="btnX" Content="X" FontSize="30" Foreground="Black" Background="{x:Null}" HorizontalAlignment="Left" Height="60" Width="60" Margin="0 10 0 0" Click="Pulsar_X"/>
+                            <Button x:Name="btnY" Content="Y" FontSize="30" Foreground="Black" Background="{x:Null}" HorizontalAlignment="Center" Height="60" Width="60" Margin="0 -60 0 0" Click="Pulsar_Y"/>
+                            <Button x:Name="btnZ" Content="Z" FontSize="30" Foreground="Black" Background="{x:Null}" HorizontalAlignment="Right" Height="60" Width="60" Margin="0 -60 0 0" Click="Pulsar_Z"/>
+                        </StackPanel>
+                    </GroupBox>
+                </Grid>
+                <Grid Width="500" Height="150" Margin="195 680 0 0">
+                    <GroupBox x:Name="gbJugador" Header="JUGADOR: " FontSize="25">
+                        <Grid>
+                            <StackPanel Orientation="Vertical" Width="240" Margin="-250 0 0 0">
+                                <TextBlock x:Name="txtPuntuacion" Text="PUNTUACION" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="37 23 0 0"/>
+                                <Separator VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="205,-30,-41,0">
+                                    <Separator.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform/>
+                                            <RotateTransform Angle="90"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </Separator.RenderTransform>
+                                </Separator>
+                            </StackPanel>
+                        </Grid>
+                    </GroupBox>
+                    <StackPanel Name="panelTiempo" Height="70" Margin="332,68,90,12">
+                        <ProgressBar x:Name="Barra" Style="{StaticResource MaterialDesignCircularProgressBar}" Value="50" Width="60" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center" ValueChanged="ValorTiempo"/>
+                        <Label x:Name="lblTimer" Content="15" FontSize="22" HorizontalAlignment="Left" Margin="24,-49,0,0" VerticalAlignment="Top" Height="33" Width="32"/>
+                    </StackPanel>
+                </Grid>
+                <Grid Width="140" Height="150" Margin="-810 680 0 0">
+                    <GroupBox Header="PISTA" FontSize="25">
+                        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Button x:Name="btnPista" Width="70" Height="60" Margin="0 0 0 0" Background="White" IsEnabled="False" Click="btnPista_Click">
+                                <materialDesign:PackIcon Kind="Search" Height="40" Width="40" Foreground="Gray"/>
+                            </Button>
+                        </StackPanel>
+                    </GroupBox>
+                </Grid>
+            </Grid>
+        </Grid>
+        <Grid>
+            <StackPanel x:Name="panelCentral" Width="650" Height="300" HorizontalAlignment="Left" Margin="437,335,0,0" VerticalAlignment="Top"/>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,28 @@
+﻿<Window x:Class="AhorcadoWPF.PantallaAñadir"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:AhorcadoWPF"
+        mc:Ignorable="d"
+         Title="PantallaTematica" Height="550" Width="450"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None">
+    <Grid>
+        <GroupBox Header="AÑADIR PALABRAS" FontSize="25">
+            <StackPanel>
+                <Button x:Name="btnAtras" Width="60" Height="50" Margin="327 -70 0 0" Click="btnAtras_Click">
+                    <materialDesign:PackIcon Kind="ArrowBackCircle" Width="25" Height="35"/>
+                </Button>
+                <TextBlock Text="TEMÁTICA" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 30 0 0"/>
+                <ComboBox Name="cbTema" FontSize="14" Height="50" Width="200" Margin="0 0 0 30"/>
+                <TextBlock Text="PALABRA" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <TextBox x:Name="txtPalabra" FontSize="17" Height="50" Width="200" Margin="0 0 0 30"/>
+                <TextBlock Text="DESCRIPCIÓN" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <TextBox x:Name="txtDescripcion" FontSize="17" TextWrapping="Wrap" Height="100" Width="200"/>
+            </StackPanel>
+        </GroupBox>
+        <Button x:Name="btnAñadir" Content="Añadir" HorizontalAlignment="Left" Margin="184,462,0,0" VerticalAlignment="Top" Width="84" Click="Añadir"/>
+    </Grid>
+</Window>

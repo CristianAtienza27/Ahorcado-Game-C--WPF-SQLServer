@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="AhorcadoWPF.Pista"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AhorcadoWPF" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="225" d:DesignWidth="650" Loaded="Pista_Loaded">
+    <Grid>
+        <materialDesign:TransitioningContent x:Name="TransitionContentSlide" Margin="0 0 0 0" OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:0:1}">
+            <GroupBox  Header="PISTA" FontSize="25" HorizontalAlignment="Left" Height="225" Background="White" Margin="0 0 0 0" VerticalAlignment="Top" Width="650">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Button x:Name="btnAtras" Width="60" Height="37" Margin="580 -162 0 0" Click="btnAtras_Click" Background="{x:Null}" BorderBrush="{x:Null}">
+                        <materialDesign:PackIcon Kind="ArrowBackCircle" Width="30" Height="30"/>
+                    </Button>
+                    <TextBlock x:Name="txtPista" FontSize="25" Text="ESTO ES UNA PRUEBA DE LA PISTA QUE SIRVE PARA VER COMO QUEDARÍA LA DESCRIPCIÓN " Width="407" TextWrapping="Wrap"/>
+                </StackPanel>
+            </GroupBox>
+        </materialDesign:TransitioningContent>
+    </Grid>
+</UserControl>
